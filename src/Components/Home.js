@@ -2,12 +2,11 @@ import React from 'react';
 import '../App.css';
 
 
-function Home() {
+function Home(props) {
+    console.log("props ", props)
     return (
         <div>
-            <div className="add-to-cart">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7SA2N8_O_ruIHdGO_hOFE_KhRlaxLUaBCaw&usqp=CAU" />
-            </div>
+
             <h1>Home Component</h1>
             <div className="cart-wrapper">
                 <div className="img-wrapper item">
@@ -22,7 +21,7 @@ function Home() {
                 </span>
                 </div>
                 <div className="btn-wrapper item">
-                    <button
+                    <button onClick={() => props.addToCartHandler({ price: 1000, name: "i-phone 12" })}
                     >
                         Add To Cart</button>
                 </div>
