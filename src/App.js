@@ -1,10 +1,11 @@
 import React from 'react';
 import Home from "./Containers/HomeContainer";
+import Header from './Containers/HeaderContainer'
 
 function App() {
   return (
     <div className="App">
-      <h2>App Component</h2>
+      <Header />
       <Home />
     </div>
   );
